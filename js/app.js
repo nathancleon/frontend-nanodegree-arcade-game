@@ -10,7 +10,7 @@ var Enemy = function(x,y) {
 		this.y = y;
 		//This speed allows the enemies to have different speeds
 		this.speed = Math.floor(Math.random() * 210) + 100;
-}
+};
 
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
@@ -25,13 +25,15 @@ Enemy.prototype.update = function(dt) {
 	if (this.x < 505) {
 		this.x += this.speed * dt;
 	}
-	else {this.x = -25};
-}
+	else {
+    this.x = -25;
+  }
+};
 
 // Draw the enemy on the screen, required method for game
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-}
+};
 
 // Now write your own player class
 // This class requires an update(), render() and
@@ -43,20 +45,20 @@ var Player = function (x,y) {
 	this.sprite = 'images/char-boy.png';
 	this.x = x;
 	this.y = y;
-}
+};
 
 // Player resets when they get to the top/water which is at the 50y coordinate on the canvas.
 Player.prototype.update = function() {
 	if(this.y < 50) {
 		player.reset();
 	}
-}
+};
 
 
 //Draws the player to the screen, just like Enemy.prototype.render
 Player.prototype.render = function() {
 	ctx.drawImage (Resources.get(this.sprite), this.x, this.y);
-}
+};
 
 //Connects keystrokes to the movement space on the canvas
 Player.prototype.handleInput = function(direction) {
@@ -72,12 +74,12 @@ Player.prototype.handleInput = function(direction) {
 	if(direction === 'down' && this.y < 400) {
 		this.y += 85;
 	}
-}
+};
 
 //Resets the player to the starting point in the bottom center space
 Player.prototype.reset = function() {
 	this.y = 400;
-}
+};
 
 
 // Now instantiate your objects.
@@ -103,7 +105,7 @@ var checkCollisions = function() {
 		player.reset();
 	}
 	});
-}
+};
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
