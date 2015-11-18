@@ -1,10 +1,8 @@
 #Udacity Arcade Game, Project 3
-===============================
 
 This project is part of Udacity's Front-End Web Development Nanodegree and its purpose is to help students cement the concepts learn in the Object Oriented JavaScript course and the HTML Canvas course. The game is inspired by the Frogger game and Udacity provided the engine and resources for the player to build on to create a functional game.a
 
 #Instructions
-===============================
 
 Download the application to a local directory by clicking [this link](https://github.com/nathancleon/frontend-nanodegree-arcade-game.git). 
 
@@ -16,7 +14,6 @@ Once your character reaches the water at the top of the level, you're safe and y
 
 
 #References
-===============================
 
 Object-Oriented JavaScript by Udacity.
 
