@@ -82,7 +82,7 @@ Player.prototype.handleInput = function(direction) {
 	}
 };
 
-//Resets the player to the starting point in the bottom center space
+//Set a starting point for the player and location of player when a reset occurs
 Player.prototype.reset = function() {
 	this.y = 400;
 };
