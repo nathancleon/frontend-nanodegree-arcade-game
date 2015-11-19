@@ -1,3 +1,6 @@
+// Added "use strict" to enable strict mode to change silent errors to throw errors and to potentially increase performance optimization
+"use strict";
+
 // Enemies our player must avoid
 var Enemy = function(x,y) {
     // Variables applied to each of our instances go here,
