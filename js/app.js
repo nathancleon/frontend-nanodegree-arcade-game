@@ -56,7 +56,7 @@ var Player = function (x,y) {
 // Player resets when they get to the top/water which is at the 50y coordinate on the canvas.
 Player.prototype.update = function() {
 	if(this.y < 50) {
-		player.reset();
+		this.reset();
 	}
 };
 
