@@ -8,7 +8,8 @@ var Enemy = function(x,y) {
     this.sprite = 'images/enemy-bug.png';
 		this.x = x;
 		this.y = y;
-		//This speed allows the enemies to have different speeds
+		// This speed allows the enemies to have different speeds
+		// Set speed a little fast at * 210, but would change it for every level if other levels are added
 		this.speed = Math.floor(Math.random() * 210) + 100;
 };
 
@@ -21,6 +22,7 @@ Enemy.prototype.update = function(dt) {
     // all computers.
 
 		//If x is less than the canvas width, multiply this.speed by the dt variable for smoother animation defined in engine.js
+		//Else set the x coordinate to -25 off screen
 
 	if (this.x < 505) {
 		this.x += this.speed * dt;
@@ -40,7 +42,8 @@ Enemy.prototype.render = function() {
 // a handleInput() method.
 
 
-//Similar to the Enemy class, this loads the character image and adds variables where the instances will go.
+// Similar to the Enemy class, this loads the character image and adds variables where the instances will go.
+	// Defined this.x and this.y variables for
 var Player = function (x,y) {
 	this.sprite = 'images/char-boy.png';
 	this.x = x;
