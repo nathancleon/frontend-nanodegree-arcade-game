@@ -108,7 +108,7 @@ var initEnemies = function(initialCoordinates) {
 
 // Add enemies to array
 // Randomly generate an x position and subtract by canvas width
-// Subtracted 200 more x distance one of the enemies on same row
+// Added 300 more x distance one of the enemies on same row
 
 var allEnemies = initEnemies([{
     x: Math.floor(Math.random() * 480) - canvasWidth,
@@ -117,7 +117,7 @@ var allEnemies = initEnemies([{
     x: Math.floor(Math.random() * 660) - canvasWidth,
     y: 220
 }, {
-    x: Math.floor(Math.random() * 620) - (canvasWidth + 200),
+    x: Math.floor(Math.random() * 620) - (canvasWidth + 300),
     y: 140
 }, {
     x: Math.floor(Math.random() * 550) - canvasWidth,
