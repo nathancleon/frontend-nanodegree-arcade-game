@@ -55,22 +55,11 @@ var Player = function(x, y) {
     this.y = y;
 };
 
-// Collision function to reset player back to starting Y coordinate
-Player.prototype.collision = function() {
-    allEnemies.forEach(function(enemy) {
-        if (enemy.x < player.x + 40 && enemy.x + 60 > player.x && enemy.y < player.y + 60 && enemy.y + 40 > player.y) {
-            player.reset();
-        }
-    });
-};
-
 // Player resets when they get to the top/water which is at the 50y coordinate on the canvas.
 Player.prototype.update = function() {
     if (this.y < 50) {
         this.reset();
     }
-
-    this.collision();
 };
 
 
